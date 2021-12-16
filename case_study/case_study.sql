@@ -204,14 +204,18 @@ values
 (6,1,1,3),
 (7,2,1,2),
 (8,2,12,2);
+
 select *from hop_dong_chi_tiet;
 
 
 -- task 2
+-- 	Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên bắt đầu là một trong các ký tự “H”, “T” hoặc “K” và 
+--     có tối đa 15 kí tự.
 select *from nhan_vien
 where length(ho_va_ten)<15 and ho_va_ten like 'H%' OR ho_va_ten like'T%' or ho_va_ten like 'K%';
 
 -- task 3
+-- Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.
 
 SELECT * FROM khach_hang WHERE (round(datediff(curdate(), ngay_sinh)/365,0) <= 50 
 and  (round(datediff(curdate(), ngay_sinh)/365,0) >= 18 ) );
@@ -323,4 +327,49 @@ group by hd.ma_hop_dong ;
 
 -- task 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng.
 --  (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
-select dv.ma_dich_vu, dv.ten_dich_vu_di_kem
+select  dvdk.ma_dich_vu_di_kem,dvdk.ten_dich_vu_di_kem,sum(hdct.so_luong) 'so_luong_dich_vu_di_kem'
+from dich_vu_di_kem dvdk join hop_dong_chi_tiet hdct on dvdk.ma_dich_vu_di_kem=hdct.ma_dich_vu_di_kem
+group by hdct.ma_dich_vu_di_kem
+having sum(hdct.so_luong)>=(
+ select max(hop_dong_chi_tiet.so_luong)
+from hop_dong_chi_tiet
+);
+
+-- task 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. 
+-- Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem,
+--  so_lan_su_dung (được tính dựa trên việc count các ma_dich_vu_di_kem).
+select hd.ma_hop_dong, ldv.ten_loai_dich_vu, dvdk.ten_dich_vu_di_kem, count(dvdk.ma_dich_vu_di_kem) 'so_lan_su_dung'
+from dich_vu_di_kem dvdk join hop_dong_chi_tiet hdct on dvdk.ma_dich_vu_di_kem=hdct.ma_dich_vu_di_kem
+join hop_dong hd on hdct.ma_hop_dong=hd.ma_hop_dong
+join dich_vu dv on hd.ma_dich_vu=dv.ma_dich_vu
+join loai_dich_vu ldv on dv.ma_loai_dich_vu=ldv.ma_loai_dich_vu
+group by dvdk.ma_dich_vu_di_kem
+having count(dvdk.ma_dich_vu_di_kem)=1;
+
+-- task 15 	Hiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien,
+--  ho_ten, ten_trinh_do, ten_bo_phan, so_dien_thoai, dia_chi mới chỉ lập được tối đa 3 hợp đồng từ năm 2020 đến 2021.
+select nv.ma_nhan_vien,  nv.ho_va_ten, td.ten_trinh_do, bp.ten_bo_phan, nv.sdt, nv.dia_chi,hd.ngay_lam_hop_dong,ngay_lam_hop_dong,count(ho_va_ten)
+from trinh_do td join nhan_vien nv on td.ma_trinh_do=nv.ma_trinh_do
+join bo_phan bp on nv.ma_bo_phan=bp.ma_bo_phan
+join hop_dong hd on nv.ma_nhan_vien=hd.ma_nhan_vien
+group by nv.ma_nhan_vien
+having count(ho_va_ten)<=3;
+
+-- task 16	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
+
+
+-- task 17.	Cập nhật thông tin những khách hàng có ten_loai_khach từ Platinum lên Diamond,
+--  chỉ cập nhật những khách hàng đã từng đặt phòng với Tổng Tiền thanh toán trong năm 2021 là lớn hơn 1.000.000 VNĐ.
+select kh.ma_khach_hang, kh.ho_ten, lk.ten_loai_khach, sum(dv.chi_phi_thue + hdct.so_luong * dvdk.gia) as 'tong_tien'
+from loai_khach lk join khach_hang kh on lk.ma_loai_khach=kh.ma_loai_khach
+join hop_dong hd on kh.ma_khach_hang=hd.ma_khach_hang
+join dich_vu dv on hd.ma_dich_vu=dv.ma_dich_vu
+join hop_dong_chi_tiet hdct on hd.ma_hop_dong=hdct.ma_hop_dong
+join dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem=dvdk.ma_dich_vu_di_kem
+group by kh.ma_loai_khach
+having ten_loai_khach='Platinium' and sum(dv.chi_phi_thue + hdct.so_luong * dvdk.gia)>1000000;
+-- update loai_khach
+-- set ten_loai_khach='Diamond'
+-- where ten_loai_khach='platinium';
+-- select * 
+-- from loai_khach

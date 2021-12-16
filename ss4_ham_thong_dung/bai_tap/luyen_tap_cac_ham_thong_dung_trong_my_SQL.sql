@@ -63,14 +63,24 @@ VALUES (1, 1, 8, 1),
        
       --  Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.
 	select *
-	from subject
-	order by Credit desc
-	limit 1;
+	from subject s
+	where s.Credit >=(
+    select max(subject.Credit)
+    from subject
+    );
+  
     
   --   Hiển thị các thông tin môn học có điểm thi lớn nhất.
 select max(m.Mark) , s.SubName
 from mark m join subject s on m.SubId = s.SubId
-group by s.SubId
+where (m.Mark) >= (select max(mark.Mark)
+from mark
+)
+group by StudentId;
 
-  
+--   Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
+select s.StudentName,m.Mark
+from student s join mark m on s.StudentId=m.StudentId
+order by m.Mark desc
+
   

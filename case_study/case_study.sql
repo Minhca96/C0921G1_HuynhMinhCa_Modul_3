@@ -410,14 +410,9 @@ where hop_dong_chi_tiet.so_luong<10) as tam);
 -- task 20.	Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống,
 --  thông tin hiển thị bao gồm id (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi.
 select  
- nv.ma_nhan_vien, nv.ho_va_ten, nv.email, nv.sdt, nv.ngay_sinh, nv.dia_chi, kh.ma_khach_hang,
- kh.ho_ten, kh.email, kh.so_dien_thoai, kh.ngay_sinh, kh.dia_chi
- from nhan_vien nv left join hop_dong hd on nv.ma_nhan_vien=hd.ma_nhan_vien
- left join khach_hang kh on hd.ma_khach_hang=kh.ma_khach_hang
+ nhan_vien.ma_nhan_vien, nhan_vien.ho_va_ten, nhan_vien.email, nhan_vien.sdt, nhan_vien.ngay_sinh, nhan_vien.dia_chi
+ from nhan_vien
  union all
- select 
-nv.ma_nhan_vien, nv.ho_va_ten,
-nv.email, nv.sdt, nv.ngay_sinh, nv.dia_chi, kh.ma_khach_hang, kh.ho_ten, kh.email, kh.so_dien_thoai, kh.ngay_sinh,kh.dia_chi
-from nhan_vien nv left join hop_dong hd on nv.ma_nhan_vien=hd.ma_nhan_vien
-right join khach_hang kh on hd.ma_khach_hang=kh.ma_khach_hang
+ select khach_hang.ma_khach_hang, khach_hang.ho_ten, khach_hang.email, khach_hang.so_dien_thoai, khach_hang.ngay_sinh,khach_hang.dia_chi
+from khach_hang
 

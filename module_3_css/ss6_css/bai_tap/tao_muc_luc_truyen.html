@@ -3,23 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        [ class*="col-"] {
+            float: left;
+            padding: 5px;
+
+        }
+
+        .row::after {
+            clear: both;
+            display: block;
+            content: "";
+
+        }
+        body{
+            background-color: aquamarine;
+        }
+        .truyen{
+            background-color: #CDCDCD;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        .mucluc{
+            background-color: blanchedalmond;
+            color: crimson;
+        }
+    </style>
 </head>
 <body>
 
 <p>
-    Mục Lục Truyện Tranh <br>
+    <div class="row">
+    <div class="col-12 mucluc">
+        <span > Mục Lục Truyện Tranh </span>
+    </div>
+</div>
 
-    <a href="https://eva.vn/lam-me/truyen-co-tich-tam-cam-c10a128670.html"><h5>1. Tấm Cám</h5></a>
-    <img src="1361949585-chuyentamcam.jpg" height="70px" width="100px" alt="ảnh bị lỗi">
-    <a href="https://eva.vn/lam-me/truyen-co-tich-so-dua-c10a389981.html"><h5>2.Sọ Dừa</h5></a>
-    <img src="truyen-co-tich-so-dua-so-dua-2-1556098767-579-width600height413.jpg" height="70px" width="100px"
-         alt="anh_bị_lỗi">
-    <a href="https://eva.vn/lam-me/truyen-co-tich-cay-khe-su-tich-an-khe-tra-vang-c10a455525.html"><h5>3.Cây Khế</h5>
-    </a>
-    <img src="truyen-co-tich-cay-khe---su-tich-an-khe-tra-vang-c--y-kh----1-1606459809-231-width650height465.jpg"
-         height="70px" width="100px" alt="ảnh_bị_lỗi">
-    <a href="https://eva.vn/day-con/truyen-co-tich-cay-tre-tram-dot-c14a421189.html"><h5>4.Cây Tre Trăm Đót</h5></a>
-    <img src="tre-3-1580910397-926-width512height388.jpg" height="70px" width="100px" alt="">
+
+    <div class="row">
+    <div class="col-12 truyen">
+        <a href="https://eva.vn/lam-me/truyen-co-tich-tam-cam-c10a128670.html"><h5>1. Tấm Cám</h5></a>
+        <img src="1361949585-chuyentamcam.jpg" height="70px" width="100px" alt="ảnh bị lỗi">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 truyen">
+        <a href="https://eva.vn/lam-me/truyen-co-tich-so-dua-c10a389981.html"><h5>2.Sọ Dừa</h5></a>
+        <img src="truyen-co-tich-so-dua-so-dua-2-1556098767-579-width600height413.jpg" height="70px" width="100px"
+             alt="anh_bị_lỗi">
+    </div>
+</div>
+
+<div class="row">
+    <div class=" col-12 truyen">
+        <a href="https://eva.vn/lam-me/truyen-co-tich-cay-khe-su-tich-an-khe-tra-vang-c10a455525.html"><h5>3.Cây Khế</h5>
+        </a>
+        <img src="truyen-co-tich-cay-khe---su-tich-an-khe-tra-vang-c--y-kh----1-1606459809-231-width650height465.jpg"
+             height="70px" width="100px" alt="ảnh_bị_lỗi">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 truyen">
+        <a href="https://eva.vn/day-con/truyen-co-tich-cay-tre-tram-dot-c14a421189.html"><h5>4.Cây Tre Trăm Đót</h5></a>
+        <img src="tre-3-1580910397-926-width512height388.jpg" height="70px" width="100px" alt="">
+    </div>
+</div>
+
+
+
+
+
+
+
 </p>
 
 

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        [ class*="col-"] {
+            float: left;
+            padding: 5px;
+
+        }
+
+        .row::after {
+            clear: both;
+            display: block;
+            content: "";
+
+        }
+
+        .center {
+            width: 50%;
+        }
+
+        .logo {
+            background-color: bisque;
+            font-size: 20pt;
+            text-align: center;
+
+
+        }
+
+        .banner {
+            background-color: bisque;
+            font-size: 20pt;
+            text-align: center;
+
+
+        }
+
+
+        .menu {
+            font-size: 14pt;
+            background-color: bisque;
+            margin-top: 5px;
+        }
+
+        .search {
+            text-align: right;
+            background-color: bisque;
+            margin-top: 5px;
+
+        }
+
+        .new_1 {
+            background-color: green;
+            text-align: center;
+        }
+
+        .new_2 {
+            background-color: green;
+
+            text-align: center;
+        }
+        .slide{
+            background-color: bisque;
+            height: 120px;
+            padding: 0;
+            text-align: center;
+            margin-top: 15px;
+            border-left: 10px;
+            width: 305px;
+            margin-left: 10px;
+        }
+        .hot_new{
+            background-color: cadetblue;
+            height: 120px;
+            padding: 0;
+            text-align: center;
+            margin-top: 15px;
+            width: 305px;
+
+
+        }
+        .new{
+          background: aquamarine;
+            margin-top: 15px;
+            height: 75px;
+            width: 200px;
+            margin-right: 4px;
+            text-align: center;
+        }
+        .map{
+            height: 93px;
+            background-color: blueviolet;
+            margin-top: 9px;
+            text-align: center;
+        }
+        .tap_chi{
+            background-color: chocolate;
+        }
+        .home{
+            background-color: chocolate;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="col-3 logo">
+        logo
+    </div>
+
+    <div class=" col-9 banner">
+        banner
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-10 menu">
+        Home | Student | courser | About Us | Contact US
+
+
+    </div>
+    <div class="col-2 search">
+        <input type="text" placeholder="moi nhap thong tin cam tim">
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-3">
+        <div class="row">
+            <div class="rol-12 new_1">
+                <p>Introduction new</p>
+                <p>Introduction new</p>
+                <p>Introduction new</p>
+                <p>Introduction new</p>
+
+            </div>
+        </div>
+        <div class="col-12 new_2">
+            <p>Introduction new</p>
+            <p>Introduction new</p>
+            <p>Introduction new</p>
+            <p>Introduction new</p>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="row">
+            <div class="col-6 hot_new">
+               <p> hot new</p>
+            </div>
+            <div class="col-6 slide">
+                <p>photo slide</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 new">
+                <p>new 1</p>
+            </div>
+            <div class="col-4 new">
+                <p>new 2</p>
+            </div>
+            <div class="col-4 new">
+                <p>new 3</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 new">
+               <p> new 4</p>
+            </div>
+            <div class="col-4 new">
+                <p>new 5</p>
+            </div>
+            <div class="col-4 new">
+                <p>new 6</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-3">
+        <div class="row">
+            <div class="rol-12 map">
+                <p>map 1</p>
+
+
+            </div>
+        </div>
+        <div class="col-12 map">
+            <p>map 2</p>
+
+        </div>
+        <div class="col-12 map">
+            <p>map 3</p>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6 tap_chi">
+Tap chi lap trinh
+    </div>
+    <div class="col-6 home">
+Home | Contract
+    </div>
+
+</div>
+</body>
+</html>

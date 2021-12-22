@@ -2,45 +2,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="../../css/bootstrap.min.css">-->
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        [ class*="col-"] {
+            float: left;
+            padding: 5px;
+
+        }
+
+        .row::after {
+            clear: both;
+            display: block;
+            content: "";
+
+        }
+        .icon_facebook li{
+            position: relative;
+            float: left;
+            list-style: none;
+            margin-left: 15px;
+
+        }
+        .home li{
+          position: relative;
+            float: left;
+            list-style: none;
+            text-align: center;
+            margin-left: 70px;
+
+
+        }
+        .bell li{
+            position: relative;
+            float: left;
+            list-style: none;
+            margin-left: 20px;
+
+
+        }
+    </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar scroll</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Link
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
-                </li>
+
+    <div class="row" style="background-color: #0a53be">
+        <div class="col-3">
+            <ul class="icon_facebook">
+                <li><img src="facebook.svg" alt="" width="32" height="32"></li>
+                <li><input type="text" placeholder="tim kiem" width="32" height="32"></li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+
         </div>
-    </div>
+
+        <div class="col-5">
+        <ul class="home">
+            <li><img src="house-door-fill.svg" alt="" width="32" height="32"></li>
+            <li><img src="youtube.svg" alt="" width="32" height="32"></li>
+            <li><img src="shop.svg" alt="" width="32" height="32"></li>
+            <li><img src="cast.svg" alt="" width="32" height="32"></li>
+        </ul>
+        </div>
+
+        <div class="col-3">
+            <ul class="bell">
+                <li><img src="../../ss8_bootstrap/bai_tap/hinh-nen-4k-tuyet-dep-cho-may-tinh-05%20(1).jpg " alt="" width="48" height="32"></li>
+                <li><img src="list.svg" alt="" width="32" height="32"></li>
+                <li><img src="messenger.svg" alt="" width="32" height="32"></li>
+                <li><img src="bell.svg" alt="" width="32" height="32"></li>
+            </ul>
+
+        </div>
+
+
+</div>
 </nav>
 </body>
 </html>

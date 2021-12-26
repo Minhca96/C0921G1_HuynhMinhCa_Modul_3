@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c6fd0b6e-854e-447a-ad9e-f276546d8c8c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../bai_tap/calculator/src/main/java/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap/calculator/src/main/java/CalculatorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap/danh_sach_khach_hang/src/main/java/KhachHang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap/danh_sach_khach_hang/src/main/java/KhachHangServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chuyen_doi_tien/src/main/webapp/converter.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/distionary/src/main/webapp/Distionary.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="22j4Lw3jumTyXqxbK20F6vZPBV6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/distionary" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c6fd0b6e-854e-447a-ad9e-f276546d8c8c" name="Default Changelist" comment="" />
+      <created>1640337609858</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640337609858</updated>
+      <workItem from="1640337611126" duration="19000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="100" key="FileChooserDialogImpl" timestamp="1640337628951">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1640337628951" />
+  </component>
+</project>

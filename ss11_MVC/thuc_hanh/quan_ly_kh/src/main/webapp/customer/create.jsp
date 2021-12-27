@@ -21,6 +21,7 @@
 <body>
 
 <h1>Create new customer</h1>
+
 <p>
     <c:if test='${requestScope["message"] != null}'>
         <span class="message">${requestScope["message"]}</span>
@@ -29,7 +30,7 @@
 <p>
     <a href="/customers">Back to customer list</a>
 </p>
-<form method="post">
+<form  action="/customers" method="post">
     <fieldset>
         <legend>Customer information</legend>
         <table>

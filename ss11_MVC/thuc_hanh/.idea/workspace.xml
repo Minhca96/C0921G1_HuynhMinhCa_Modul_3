@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b9093ef6-b44f-4b97-8c7e-af189a325ffa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../bai_tap/quan_ly_sp/src/main/java/bean/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap/quan_ly_sp/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap/quan_ly_sp/src/main/java/repository/IProductRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap/quan_ly_sp/src/main/java/repository/Impl/ProductRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap/quan_ly_sp/src/main/java/sevice/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap/quan_ly_sp/src/main/java/sevice/Impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap/quan_ly_sp/src/main/webapp/list_product_jstl.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quan_ly_kh/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/quan_ly_kh/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quan_ly_kh/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/quan_ly_kh/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quan_ly_kh/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/quan_ly_kh/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quan_ly_kh/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/quan_ly_kh/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quan_ly_kh/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/quan_ly_kh/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quan_ly_kh/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/quan_ly_kh/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quan_ly_kh/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/quan_ly_kh/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quan_ly_kh/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quan_ly_kh/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quan_ly_kh/build/classes/java/main/service/CustomerServiceIplm.class" beforeDir="false" afterPath="$PROJECT_DIR$/quan_ly_kh/build/classes/java/main/service/CustomerServiceIplm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quan_ly_kh/build/libs/quan_ly_kh-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/quan_ly_kh/build/libs/quan_ly_kh-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quan_ly_kh/src/main/webapp/customer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/quan_ly_kh/src/main/webapp/customer/create.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="22rQfH5abaJJninoPwQ2GmCi52c" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b9093ef6-b44f-4b97-8c7e-af189a325ffa" name="Default Changelist" comment="" />
+      <created>1640593327566</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640593327566</updated>
+      <workItem from="1640593328690" duration="32000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>

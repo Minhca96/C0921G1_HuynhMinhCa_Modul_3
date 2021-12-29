@@ -11,7 +11,7 @@ import java.util.List;
 public class UserSImpl implements IUserS {
     IUserR iUserR = new UserRImpl();
     @Override
-    public List<User> FindAll() throws SQLException {
+    public List<User> FindAll() {
        return iUserR.FindAll();
 
     }
@@ -21,4 +21,10 @@ public class UserSImpl implements IUserS {
     return iUserR.search(country);
 
     }
+
+    @Override
+    public List<User> sort() {
+        return iUserR.sort();
+    }
+
 }

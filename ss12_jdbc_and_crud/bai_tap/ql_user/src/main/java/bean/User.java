@@ -16,11 +16,11 @@ public class User {
         this.country = country;
     }
 
-    public int getId() {
-        return id;
+    public int getId(int id) {
+        return this.id;
     }
 
-    public void setId(int id) {
+    public void setId(int id1) {
         this.id = id;
     }
 

@@ -16,24 +16,21 @@
 
 <table class="table table-dark">
     <thead>
-    ...
+    <tr class="table-active">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Country</th>
+    </tr>
     </thead>
     <tbody>
-    <tr class="table-active">
-       <th>ID</th>
-       <th>Name</th>
-       <th>Email</th>
-       <th>Country</th>
-    </tr>
-
-    <c:forEach var="u" items="${user}">
+    <c:forEach  items="${userone}" var="u" varStatus="loop">
     <tr>
-        <td>${u.id}</td>
+        <td>${loop.count}"</td>
         <td>${u.name}</td>
         <td>${u.email}</td>
         <td>${u.country}</td>
     </tr>
-
     </c:forEach>
     </tbody>
 </table>
@@ -46,6 +43,13 @@
         </form>
     </div>
 </nav>
+
+<form action="/user?actionUser=sort" >
+    <input type="hidden" name="actionUser" value="sort">
+    <button class="btn btn-primary" type="submit">Sort</button>
+</form>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

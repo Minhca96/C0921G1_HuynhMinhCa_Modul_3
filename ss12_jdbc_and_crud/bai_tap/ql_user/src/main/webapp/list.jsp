@@ -26,7 +26,8 @@
     <tbody>
     <c:forEach  items="${userone}" var="u" varStatus="loop">
     <tr>
-        <td>${loop.count}"</td>
+<%--        <td>${loop.count}"</td>--%>
+        <td>${u.id}</td>
         <td>${u.name}</td>
         <td>${u.email}</td>
         <td>${u.country}</td>

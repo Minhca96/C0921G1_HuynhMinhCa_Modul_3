@@ -96,3 +96,5 @@ values
 (1, 1),
 (1, 2),
 (2, 1);
+
+create procedure (`name`, date_of_birth, account_james_account, email, class_id)

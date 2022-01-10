@@ -17,7 +17,7 @@ public class UserDAO implements IUserDAO {
 
     private static final String SELECT_USER_BY_ID = "select id,name,email,country from users where id =?";
     private static final String SELECT_ALL_USERS = "select * from username";
-    private static final String DELETE_USERS_SQL = "delete from username where id = ?;";
+    private static final String DELETE_USERS_SQL = "delete from username where id = ?";
     private static final String UPDATE_USERS_SQL = "update username set name = ?,email= ?, country =? where id = ?;";
 
     public UserDAO() {
@@ -41,7 +41,8 @@ public class UserDAO implements IUserDAO {
     public void insertUser(User user) throws SQLException {
         System.out.println(INSERT_USERS_SQL);
         // try-with-resource statement will auto close the connection.
-        try (Connection connection = getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getEmail());
             preparedStatement.setString(3, user.getCountry());
@@ -105,7 +106,8 @@ public class UserDAO implements IUserDAO {
 
     public boolean deleteUser(int id) throws SQLException {
         boolean rowDeleted;
-        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);) {
+        try (Connection connection = getConnection();
+             PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);) {
             statement.setInt(1, id);
             rowDeleted = statement.executeUpdate() > 0;
         }
@@ -114,7 +116,8 @@ public class UserDAO implements IUserDAO {
 
     public boolean updateUser(User user) throws SQLException {
         boolean rowUpdated;
-        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(UPDATE_USERS_SQL);) {
+        try (Connection connection = getConnection();
+             PreparedStatement statement = connection.prepareStatement(UPDATE_USERS_SQL);) {
             statement.setString(1, user.getName());
             statement.setString(2, user.getEmail());
             statement.setString(3, user.getCountry());
@@ -128,26 +131,14 @@ public class UserDAO implements IUserDAO {
     @Override
 
     public User getUserById(int id) {
-
         User user = null;
-
         String query = "{CALL get_user_by_id(?)}";
-
-        // Step 1: Establishing a Connection
-
         try (Connection connection = getConnection();
-
-             // Step 2:Create a statement using connection object
-
              CallableStatement callableStatement = connection.prepareCall(query);) {
 
             callableStatement.setInt(1, id);
-
-            // Step 3: Execute the query or update query
-
+            
             ResultSet rs = callableStatement.executeQuery();
-
-            // Step 4: Process the ResultSet object.
 
             while (rs.next()) {
 

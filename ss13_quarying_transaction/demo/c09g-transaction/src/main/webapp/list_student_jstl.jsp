@@ -8,7 +8,7 @@
     <h2>Student List</h2>
     <a href="/student?actionUser=create">Create new student</a>
     <div>
-        <form action="/student">
+        <form action="student">
             <input type="hidden" name="actionUser" value="search">
             <input type="text" name="keyword">
             <input type="submit" value="Search">
